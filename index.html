@@ -5,22 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deyuan Yang - Resume</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript function to hide all sections and only show the selected one
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block'; // Show selected section
+            }
+        }
+
+        // Initially show the profile section
+        window.onload = function() {
+            showSection('profile');
+        };
+    </script>
 </head>
 <body>
-    <header>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showSection('profile')">Profile</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('education')">Education</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('skills')">Technical Skills</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('work')">Work Experience</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="javascript:void(0);" onclick="showSection('resume')">Download Resume</a></li>
+        </ul>
+    </nav>
+
+    <header id="profile">
         <h1>Deyuan Yang</h1>
         <p>Email: <a href="mailto:doreenyang02@gmail.com">doreenyang02@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/Doreenyang" target="_blank">github.com/Doreenyang</a> | LinkedIn: <a href="https://linkedin.com/in/deyuan-yang-ba7680222" target="_blank">linkedin.com/in/deyuan-yang-ba7680222</a> | Phone: (765)-712-2195</p>
         <img src="profile.jpg" alt="Deyuan Yang" class="profile-pic">
+        <p>Computer Science and Mathematics student with over four years of software development experience. Skilled in distributed systems, full-stack development, and application design. Proven track record of delivering high-quality code on time and within budget. Seeking a challenging software engineering internship for summer 2025, Co-op for fall 2025 or full time job starting in summer 2026 to further develop skills and contribute to innovative projects.</p>
     </header>
 
-    <section>
+    <section id="education">
         <h2>Education</h2>
         <p><strong>Washington University in St. Louis</strong>, St. Louis, MO (Aug 2023 – May 2026)</p>
         <p>Bachelor of Science in Computer Science, Master of Science in Computer Science, GPA: 3.7/4.0</p>
         <p><strong>DePauw University</strong>, Greencastle, IN (Aug 2020 – May 2023)</p>
         <p>Bachelor of Arts in Pre-Engineering and Mathematics, GPA: 4.0/4.0</p>
+    </section>
 
+    <section id="skills">
         <h2>Technical Skills</h2>
         <ul>
             <li>Programming Languages: Python, C++, Java, JavaScript, TypeScript, Ruby, Go, etc.</li>
@@ -29,7 +62,9 @@
             <li>AI & Blockchain: Starknet, Ethereum, Smart Contracts, LLMs, etc.</li>
             <li>Development Tools: Git, GitHub, Unity, Unreal Engine, etc.</li>
         </ul>
+    </section>
 
+    <section id="work">
         <h2>Work Experience</h2>
         <h3>Web Developer and Designer for Sustain-a-Plate Web Application</h3>
         <p>June 2024 – August 2024</p>
@@ -51,7 +86,9 @@
             <li>Developed a React Native app to enhance in-store shopping experience.</li>
             <li>Implemented real-time inventory updates and personalized user profiles.</li>
         </ul>
+    </section>
 
+    <section id="projects">
         <h2>Projects</h2>
         <h3>Agent-based Advertisement Generator</h3>
         <p>Oct 2023 – March 2024</p>
@@ -70,11 +107,13 @@
         <ul>
             <li>Research to mitigate cybersickness in VR using Unreal Engine and Arduino.</li>
         </ul>
+    </section>
 
-        <!-- Add a Download Section -->
+    <section id="resume">
         <h2>Download My Resume</h2>
         <p>You can download my full resume as a PDF:</p>
         <a href="resume.pdf" download>Download Resume</a>
     </section>
+
 </body>
 </html>
